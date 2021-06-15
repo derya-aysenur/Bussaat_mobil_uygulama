@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".bukart_bilet_tipi">
+    <LinearLayout
+        android:id="@+id/ust_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="109dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="95dp"
+                    android:layout_height="59dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/otobus" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/cizgi"
+            android:layout_width="2dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/txtbilet_tipi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="41dp"
+                    android:gravity="center"
+                    android:text="@string/bilet_tipi_menü"
+                    android:textColor="@color/sari"
+                    android:textSize="17sp"
+                    android:textStyle="bold">
+
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="620dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ust_menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txttek_kullanımlık"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="27dp"
+                    android:gravity="center"
+                    android:text="@string/tek_biletler"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtbukart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="73dp"
+                    android:gravity="center"
+                    android:text="@string/bukart"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/txttek_kullanımlık"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="23dp"
+                    app:srcCompat="@drawable/ksahat" />
+
+                <ImageView
+                    android:id="@+id/bursa_kart1"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/txtbukart"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="49dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_toEndOf="@+id/imageView"
+                    app:srcCompat="@drawable/bursakart" />
+
+                <TextView
+                    android:id="@+id/txt_kısahat_fiyat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="68dp"
+                    android:text="@string/kısa_hat_fiyat"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/txt_uzunhat"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/txt_kısahat_fiyat"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/uzunhat" />
+
+                <TextView
+                    android:id="@+id/txt_uzunhat_fiyat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_uzunhat"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/uzun_hat_fiyat"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/indirimli_bilet"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/txt_uzunhat_fiyat"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/hayvanat_bahcesi_bilet" />
+
+                <TextView
+                    android:id="@+id/txt_indirimlibilet_fiyat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/indirimli_bilet"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="58dp"
+                    android:text="@string/indirimli_bilet_fiyati"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/indirimlifiyat_tam"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/txt_indirimlibilet_fiyat"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/hayvanatbahcesitam" />
+
+                <TextView
+                    android:id="@+id/txt_indirimlitambilet_fiyati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/indirimlifiyat_tam"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/idirimli_bilet_tam_fiyat"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/budo"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/txt_indirimlitambilet_fiyati"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/f3_budo" />
+
+                <TextView
+                    android:id="@+id/txt_budo_fiyati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/budo"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/budo_bilet_fiyati"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/kisisellestirilmis_kart"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/txt_budo_fiyati"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/kselletrlmkart" />
+
+                <TextView
+                    android:id="@+id/txt_kisisellestirilmiş_kart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kisisellestirilmis_kart"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/kisillestirilmis_kart_bursa"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/bursa_kart2"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/bursa_kart1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="33dp"
+                    app:srcCompat="@drawable/bursakart2" />
+
+                <ImageView
+                    android:id="@+id/bursa_kart3"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/bursa_kart2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="33dp"
+                    app:srcCompat="@drawable/bursakart3" />
+
+                <ImageView
+                    android:id="@+id/bursa_kart4"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/bursa_kart3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="33dp"
+                    app:srcCompat="@drawable/bursakart4" />
+
+                <ImageView
+                    android:id="@+id/bursa_kart5"
+                    android:layout_width="148dp"
+                    android:layout_height="112dp"
+                    android:layout_below="@+id/bursa_kart4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="33dp"
+                    app:srcCompat="@drawable/bursakart5" />
+
+                <TextView
+                    android:id="@+id/text_bursakart_fiyat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bursa_kart5"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="59dp"
+                    android:text="@string/bursakart_fiyat"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_kisiselkart_tipleri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_kisisellestirilmiş_kart"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="36dp"
+                    android:text="@string/kisisel_kart_tipleri"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txt_indirimlikart_tipleri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_kisiselkart_tipleri"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="3dp"
+                    android:textSize="13sp"
+                    android:text="@string/indirimli_kart_tipleri"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_ındırımlıogrenci"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_indirimlikart_tipleri"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/indirimli_ogrenci_kart"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/txt_ındırımlıogretmen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/txt_ındırımlıogrenci"
+                    android:text="@string/indirimli_ogretmen_kart"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_ındırımlıyasli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/txt_ındırımlıogretmen"
+                    android:text="@string/indirimli_yasli_kart"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/txt_ucretsizkart_tipleri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ındırımlıyasli"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/ücretsiz_kart_tipleri"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txt_ucretsiz_engelli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_ucretsizkart_tipleri"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/ücretsiz_engelli"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_ucretsizyasli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ucretsiz_engelli"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/ücretsiz_yasli"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/txt_ucretsizyasli2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_ucretsizyasli"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/ücretsiz_yasli2"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/txt_ucretsizharcirah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ucretsizyasli2"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/ücretsiz_harcirah"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_ucretsizsporcu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ucretsizharcirah"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/ücretsiz_sporcu"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_ucretsizbasin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ucretsizsporcu"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/ücretsiz_basin"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_ucretsizsahil_guvenlik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ucretsizbasin"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/ücretsiz_sahilguvenlik"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_ucretsizgazi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ucretsizsahil_guvenlik"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/ücretsiz_gazi"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_abonmankart_tipleri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_ucretsizgazi"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/abonman_kart_tipleri"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/txt_abonman_tam1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_abonmankart_tipleri"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/abonman_tam1"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_abonman_tam2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_abonman_tam1"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/abonman_tam2"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_abonman_ogrenci1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_abonman_tam2"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/abonman_ogrenci1"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_abonman_ogrenci2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_abonman_ogrenci1"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/abonman_ogrenci2"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_abonman_kurumsal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_abonman_ogrenci2"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/abonman_kurumsal1"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/txt_abonman_kurumsal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_abonman_kurumsal1"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/abonman_kurumsal2"
+                    android:textColor="@color/koyu"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/txt_abonman_kurumsal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_abonman_kurumsal2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/abonman_kurumsal3"
+                    android:textColor="@color/koyu"
+                    android:layout_marginBottom="100dp"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

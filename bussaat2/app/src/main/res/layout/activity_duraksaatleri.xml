@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".duraksaatleri">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="109dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="95dp"
+                    android:layout_height="59dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    app:srcCompat="@drawable/otobus" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="2dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/txtyolcukural"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="41dp"
+                    android:gravity="center"
+                    android:text="@string/duraksaatleri"
+                    android:textColor="@color/sari"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                       >
+
+                    <TextView
+                        android:id="@+id/hatseciniz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="73dp"
+                        android:layout_marginTop="54dp"
+                        android:gravity="center"
+                        android:text="@string/hatseciniz"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="134dp"
+                        android:layout_height="27dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="54dp"
+                        android:layout_marginEnd="103dp"
+                        android:layout_toEndOf="@+id/hatseciniz"
+                        android:background="@color/black"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/gidis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="37dp"
+                        android:layout_below="@+id/hatseciniz"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="34dp"
+                        android:layout_marginEnd="140dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/duraklar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gidis"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/haftaici_gidis_saat"
+                        android:layout_width="381dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/duraklar"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/pazartesi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="21dp"
+                            android:gravity="center"
+                            android:text="@string/pazartesi"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/pzrtesisaat"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pazartesi"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/sali"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_toEndOf="@+id/pazartesi"
+                            android:gravity="center"
+                            android:text="@string/sali"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/salisaat"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sali"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/pzrtesisaat"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/carsamba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="34dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/sali"
+                            android:gravity="center"
+                            android:text="@string/carsamba"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/crsmbasaat"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/carsamba"
+                            android:layout_marginStart="29dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@+id/salisaat"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/persembe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_toEndOf="@+id/carsamba"
+                            android:gravity="center"
+                            android:text="@string/persembe"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/persembesaat"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/persembe"
+                            android:layout_marginStart="47dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@+id/crsmbasaat"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/cuma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_toEndOf="@+id/persembe"
+                            android:gravity="center"
+                            android:text="@string/cuma"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/cumasaat"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cuma"
+                            android:layout_marginStart="37dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/persembesaat"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/haftasonu_gidis_saat"
+                        android:layout_below="@+id/haftaici_gidis_saat"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="129dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="130dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/cumartesi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/cumartesi"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/pazar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/cumartesi"
+                            android:text="@string/pazar"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/cmrtesisaat"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cumartesi"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="8dp"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:layout_marginTop="3dp"
+                            android:textSize="12dp"
+                            android:textColor="@color/koyu"/>
+
+                        <TextView
+                            android:id="@+id/pazarsaat"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pazar"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:layout_toEndOf="@+id/cmrtesisaat"
+                            android:textSize="12dp"
+                            android:textColor="@color/koyu"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/donus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="37dp"
+                        android:layout_below="@+id/haftasonu_gidis_saat"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="34dp"
+                        android:layout_marginEnd="140dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/donusduraklar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/donus"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+                    <RelativeLayout
+                        android:id="@+id/haftaici_donus_saat"
+                        android:layout_width="381dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/donusduraklar"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/pazartesi_donus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="21dp"
+                            android:gravity="center"
+                            android:text="@string/pazartesi"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/pzrtesisaat_donus"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pazartesi_donus"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/sali_donus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_toEndOf="@+id/pazartesi_donus"
+                            android:gravity="center"
+                            android:text="@string/sali"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/salisaat_donus"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sali_donus"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/pzrtesisaat_donus"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/carsamba_donus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="34dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/sali_donus"
+                            android:gravity="center"
+                            android:text="@string/carsamba"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/crsmbasaat_donus"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/carsamba_donus"
+                            android:layout_marginStart="29dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@+id/salisaat_donus"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/persembe_donus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_toEndOf="@+id/carsamba_donus"
+                            android:gravity="center"
+                            android:text="@string/persembe"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/persembesaat_donus"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/persembe_donus"
+                            android:layout_marginStart="47dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@+id/crsmbasaat_donus"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/cuma_donus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_toEndOf="@+id/persembe_donus"
+                            android:gravity="center"
+                            android:text="@string/cuma"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/cumasaat_donus"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cuma_donus"
+                            android:layout_marginStart="37dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/persembesaat_donus"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/haftasonu_donus_saat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/haftaici_donus_saat"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="129dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="130dp"
+                        android:layout_marginBottom="150dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/cumartesi_donus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/cumartesi"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/pazar_donus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/cumartesi_donus"
+                            android:text="@string/pazar"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/cmrtesisaat_donus"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cumartesi_donus"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/pazarsaat_donus"
+                            android:layout_width="39dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pazar_donus"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toEndOf="@+id/cmrtesisaat_donus"
+                            android:gravity="center"
+                            android:background="@color/saatler"
+                            android:textColor="@color/koyu"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+     </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
